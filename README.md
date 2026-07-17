@@ -8,6 +8,7 @@
 | 1672 | Richest Customer Wealth | ✅ |
 | 1295 | Find Numbers with Even Number of Digits | ✅ |
 | 1480 | Running Sum of 1D Array | ✅ |
+| 485 | Max Consecutive Ones | ✅ |
 
 ## Current Streak
 
