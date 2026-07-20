@@ -9,6 +9,7 @@
 | 1295 | Find Numbers with Even Number of Digits | ✅ |
 | 1480 | Running Sum of 1D Array | ✅ |
 | 485 | Max Consecutive Ones | ✅ |
+| 1365 | Smaller Number Than Current | ✅ |
 
 ## Current Streak
 
