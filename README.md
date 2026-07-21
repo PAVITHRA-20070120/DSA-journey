@@ -10,6 +10,8 @@
 | 1480 | Running Sum of 1D Array | ✅ |
 | 485 | Max Consecutive Ones | ✅ |
 | 1365 | Smaller Number Than Current | ✅ |
+| 344 | Reverse String | ✅ |
+
 
 ## Current Streak
 
@@ -20,3 +22,6 @@
 🔥 Day 3 Completed
 
 🔥 Day 4 Completed
+
+🔥 Day 5 Completed
+
