@@ -11,6 +11,7 @@
 | 485 | Max Consecutive Ones | ✅ |
 | 1365 | Smaller Number Than Current | ✅ |
 | 344 | Reverse String | ✅ |
+| 125 | Valid Palindrome | ✅ |
 
 
 ## Current Streak
