@@ -12,6 +12,7 @@
 | 1365 | Smaller Number Than Current | ✅ |
 | 344 | Reverse String | ✅ |
 | 125 | Valid Palindrome | ✅ |
+| 283 | Move Zeroes | ✅ |
 
 
 ## Current Streak
@@ -25,4 +26,6 @@
 🔥 Day 4 Completed
 
 🔥 Day 5 Completed
+
+🔥 Day 6 Completed
 
