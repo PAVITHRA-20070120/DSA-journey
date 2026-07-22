@@ -13,6 +13,7 @@
 | 344 | Reverse String | ✅ |
 | 125 | Valid Palindrome | ✅ |
 | 283 | Move Zeroes | ✅ |
+| 26 | RemoveDuplicatesFromArray | ✅ |
 
 
 ## Current Streak
