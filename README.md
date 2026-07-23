@@ -14,6 +14,7 @@
 | 125 | Valid Palindrome | ✅ |
 | 283 | Move Zeroes | ✅ |
 | 26 | RemoveDuplicatesFromArray | ✅ |
+| 167 | TwoSum(2) | ✅ |
 
 
 ## Current Streak
@@ -29,4 +30,6 @@
 🔥 Day 5 Completed
 
 🔥 Day 6 Completed
+
+🔥 Day 7 Completed
 
