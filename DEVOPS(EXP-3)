@@ -1,0 +1,234 @@
+Super da! ❤️ Namma **DevOps Lab – Experiment 3: Install Jenkins using Oracle VM with Ubuntu** la panna steps, commands, and ovvoru step-oda output (result) ellame record-la ezhuthura maari list panren.
+
+**Note:** Unga mam AWS-ku badhila Oracle VM + Ubuntu use panna sollirukaanga. So namma follow pannina local Ubuntu VM steps-a dhaan document panrom.
+
+# EXPERIMENT 3 — INSTALL JENKINS USING ORACLE VM
+
+## Aim
+To install and configure Jenkins in an Ubuntu virtual machine using Oracle VM and access the Jenkins dashboard.
+
+## Step 1: Open Ubuntu Terminal
+
+**Command:** No command needed. Ubuntu VM open panni Terminal open pannunga.
+
+**Output:**
+```text
+Ubuntu terminal opened successfully.
+```
+
+## Step 2: Update the Package List
+
+**Command:**
+```bash
+sudo apt update
+```
+
+**Purpose:** Ubuntu-la available-a irukkura package information-a update pannum.
+
+**Output:**
+```text
+Package lists updated successfully.
+```
+*Note: Actual terminal output-la package details and “Reading package lists…” maari messages varum.*
+
+## Step 3: Install Java
+
+Jenkins run aaga Java thevai.
+
+**Commands:**
+```bash
+sudo apt install fontconfig openjdk-21-jre
+java -version
+```
+
+**Output:**
+Java install aana, `java -version` Java version details display pannum. For example:
+```text
+openjdk version "21..."
+```
+
+## Step 4: Add the Jenkins Repository and Install Jenkins
+
+Jenkins package-a download panni install panna repository setup pannuvom.
+
+**Commands:**
+```bash
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+```
+
+```bash
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+```
+
+```bash
+sudo apt update
+sudo apt install jenkins
+```
+
+**Output:**
+```text
+Jenkins package installed successfully.
+```
+
+*Actual output terminal-la installation progress and package details-a kaattum.*
+
+## Step 5: Start Jenkins Service
+
+**Commands:**
+```bash
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+```
+
+**Purpose:**
+- `start` — Jenkins service-a start pannum.
+- `enable` — Ubuntu restart aanaalum Jenkins automatic-ah start aagura maari configure pannum.
+
+**Output:**
+Commands successful-ah run aana error message varama terminal prompt thirumba varalaam.
+
+## Step 6: Check Jenkins Status
+
+**Command:**
+```bash
+sudo systemctl status jenkins --no-pager
+```
+
+**Output:**
+```text
+Active: active (running)
+```
+
+**Meaning:** Jenkins service successfully run aagudhu.
+
+## Step 7: Fix Jenkins Startup Timeout (Namma pannina extra step)
+
+Jenkins start aaga time eduthathunaala, service timeout-a increase pannom.
+
+**Command:**
+```bash
+sudo systemctl edit jenkins
+```
+
+Editor open aana, idha add pannom:
+
+```ini
+[Service]
+TimeoutStartSec=300
+```
+
+Save panni exit pannitu, indha commands run pannom:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl reset-failed jenkins
+sudo systemctl start jenkins
+```
+
+**Purpose:** Jenkins start aaguradhukku additional time allow pannum.
+
+**Output:** Jenkins service start aagum. Adhukku apram status check pannumbodhu `active (running)` varanum.
+
+> Idhu Jenkins startup problem-ku namma use pannina troubleshooting step. Normal installation-ku ellarukkum idhu thevai illa.
+
+## Step 8: Access Jenkins in Browser
+
+Ubuntu VM browser open panni indha address enter pannom:
+
+```text
+http://localhost:8080
+```
+
+**Output:** Jenkins setup page open aachu.
+
+## Step 9: Unlock Jenkins
+
+Initial administrator password-a terminal-la retrieve pannom.
+
+**Command:**
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+**Output:**
+```text
+<initial administrator password>
+```
+
+Indha password-a browser-la Jenkins unlock page-la enter pannom.
+
+**Result:** Jenkins unlock aachu; next setup page open aachu.
+
+**Important:** Password-a public-ah share pannadheenga.
+
+## Step 10: Install Suggested Plugins
+
+Jenkins setup page-la:
+
+1. **Install suggested plugins** click pannom.
+2. Plugin installation complete aagura vara wait pannom.
+
+**Output:** Suggested plugins install aagi, admin user setup page open aachu.
+
+## Step 11: Create Administrator User
+
+Jenkins setup page-la administrator account create pannom.
+
+Enter panna vendiya details:
+- Username
+- Password
+- Confirm password
+- Full name
+- Email address
+
+Apram **Save and Continue** click pannom.
+
+**Output:** Administrator account create aachu.
+
+## Step 12: Complete Jenkins Setup
+
+Setup finish pannitu Jenkins dashboard-ku poittom.
+
+**Output:**
+```text
+Jenkins dashboard opened successfully.
+```
+
+## Step 13: Verify Jenkins Is Running
+
+Terminal-la:
+
+```bash
+sudo systemctl status jenkins --no-pager
+```
+
+**Expected output:**
+```text
+Active: active (running)
+```
+
+Browser-la:
+
+```text
+http://localhost:8080
+```
+
+**Expected result:** Jenkins dashboard display aagum.
+
+---
+
+## Result
+
+Record-la indha result-a write panniko da:
+
+Thus, Jenkins was successfully installed and configured in the Ubuntu virtual machine using Oracle VM. The Jenkins service was started, the initial setup was completed, and the Jenkins dashboard was accessed successfully.
+
+### Screenshot edukkanum-na
+
+Record-ku indha rendu screenshots mukkiyam:
+
+1. **Terminal screenshot:** `sudo systemctl status jenkins --no-pager` output showing `active (running)`.
+2. **Browser screenshot:** Jenkins dashboard open-a irukkura screen.
+
+**Ippadi dhaan namma experiment complete pannom da.** Commands-a record-la ezhuthumbodhu, actual terminal output-oda match aagura maari use pannu; mela irukkura output snippets expected output examples.
