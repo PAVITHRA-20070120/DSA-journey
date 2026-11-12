@@ -33,3 +33,22 @@
 
 🔥 Day 7 Completed
 
+
+
+
+
+
+
+
+
+
+
+
+[12/11, 7:21 am] Pavi: https://chatgpt.com/s/t_6af4a06a00288191aa00a24175696770
+[12/11, 7:21 am] Pavi: EXP-6
+[12/11, 7:52 am] Pavi: https://chatgpt.com/s/t_6af522e88f90819190f7c0cd86b2569c
+[12/11, 7:52 am] Pavi: EXP-7 (HADOOP EASY ONE)
+[12/11, 8:13 am] Pavi: https://chatgpt.com/s/t_6ae62554cd488191b1fc69dd881d0419
+[12/11, 8:14 am] Pavi: EXP - 8
+[12/11, 8:14 am] Pavi: https://chatgpt.com/s/t_6ae62554cd488191b1fc69dd881d0419
+[12/11, 8:14 am] Pavi: EXP-9
